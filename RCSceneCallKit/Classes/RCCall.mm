@@ -14,7 +14,6 @@
 #import "RCCallTipMessageCell.h"
 #import "RCUserInfoCacheManager.h"
 #import "RCCXCall.h"
-#import <RongIMKit/RongIMKit.h>
 
 #if __IPHONE_10_0
 #import <UserNotifications/UserNotifications.h>

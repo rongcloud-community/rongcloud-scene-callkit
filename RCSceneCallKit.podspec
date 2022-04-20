@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   
   # 1 - Info
   s.name             = 'RCSceneCallKit'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'CallKit For RCRTC'
   s.description      = "CallKit For RCRTC. Single Call."
   s.homepage         = 'https://www.rongcloud.cn/devcenter'
@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   
   # 2 - Mini Version
   s.ios.deployment_target = '11.0'
+  s.static_framework = true
   
   # 3 - XCConfig
   s.pod_target_xcconfig = {
@@ -33,8 +34,7 @@ Pod::Spec.new do |s|
   # CallLib Recommend >= 5.1.3
   s.dependency 'RongCloudRTC/RongCallLib'
   # IMKit Recommend >= 5.1.8
-  s.dependency 'RongCloudIM/IMKit'
-  
+  s.dependency 'RongCloudOpenSource/IMKit'
   #
   
 end

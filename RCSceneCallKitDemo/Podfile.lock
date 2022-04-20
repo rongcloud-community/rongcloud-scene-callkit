@@ -1,0 +1,51 @@
+PODS:
+  - RCSceneCallKit (0.0.1):
+    - RongCloudOpenSource/IMKit
+    - RongCloudRTC/RongCallLib
+  - RongCloudIM/ChatRoom (5.2.1):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/CustomerService (5.2.1):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/Discussion (5.2.1):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/IMLib (5.2.1):
+    - RongCloudIM/ChatRoom
+    - RongCloudIM/CustomerService
+    - RongCloudIM/Discussion
+    - RongCloudIM/IMLibCore
+    - RongCloudIM/Location
+    - RongCloudIM/PublicService
+  - RongCloudIM/IMLibCore (5.2.1)
+  - RongCloudIM/Location (5.2.1):
+    - RongCloudIM/IMLibCore
+  - RongCloudIM/PublicService (5.2.1):
+    - RongCloudIM/IMLibCore
+  - RongCloudOpenSource/IMKit (5.2.1):
+    - RongCloudIM/IMLib (= 5.2.1)
+  - RongCloudRTC/RongCallLib (5.2.1.1):
+    - RongCloudRTC/RongRTCLib
+  - RongCloudRTC/RongRTCLib (5.2.1.1):
+    - RongCloudIM/IMLibCore (>= 5.1.3)
+
+DEPENDENCIES:
+  - RCSceneCallKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - RongCloudIM
+    - RongCloudOpenSource
+    - RongCloudRTC
+
+EXTERNAL SOURCES:
+  RCSceneCallKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RCSceneCallKit: a43ca42ee96d433bee02525da296ae3a7879fdb9
+  RongCloudIM: 1ebe6a394cf5289825c2ee62a63068bdc34856f4
+  RongCloudOpenSource: 53c6e33d970a49c5af1cb02c0dfdb1e00fd6c8e8
+  RongCloudRTC: 08a50f93af8ecc6573c01dd8a4c80da486802818
+
+PODFILE CHECKSUM: 64d634d7c297e864157819600fa7b276e1a9a5aa
+
+COCOAPODS: 1.11.3

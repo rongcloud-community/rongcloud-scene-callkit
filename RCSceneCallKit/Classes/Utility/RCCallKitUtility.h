@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <RongCallLib/RongCallLib.h>
-#import <RongIMKit/RongIMKit.h>
+
 #import "UIView+SafeArea.h"
 
 UIColor* rgb(CGFloat red, CGFloat green, CGFloat blue);

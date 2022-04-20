@@ -9,6 +9,7 @@
 #import "RCCallKitUtility.h"
 #import "RCCall.h"
 #import <AVFoundation/AVFoundation.h>
+#import <RongCloudOpenSource/RongIMKit.h>
 
 UIColor* rgb(CGFloat red, CGFloat green, CGFloat blue) {
     return [UIColor colorWithRed:red / 255.0f green:green / 255.0f blue:blue / 255.0f alpha:1];
