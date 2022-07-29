@@ -60,10 +60,8 @@ UIColor* dynamic_color(NSInteger light_hex_value, NSInteger dark_hex_value) {
 }
 
 + (UIImage *)imageFromVoIPBundle:(NSString *)imageName {
-    NSBundle *frameworkBundle = [NSBundle bundleForClass:[RCCallKitUtility class]];
-    NSString *imageBundlePath = [frameworkBundle pathForResource:@"RCSceneCallKit" ofType:@"bundle"];
-    NSBundle *imageBundle = [NSBundle bundleWithPath:imageBundlePath];
-    NSString *path = [imageBundle pathForResource:imageName ofType:nil];
+    NSBundle *bundle = [self sourceBundle];
+    NSString *path = [bundle pathForResource:imageName ofType:nil];
     return [UIImage imageWithContentsOfFile:path];
 }
 
@@ -282,9 +280,19 @@ UIColor* dynamic_color(NSInteger light_hex_value, NSInteger dark_hex_value) {
     
 }
 
++ (NSBundle *)sourceBundle {
+    NSBundle *frameworkBundle = [NSBundle bundleForClass:[RCCallKitUtility class]];
+    NSString *bundlePath = [frameworkBundle pathForResource:@"RCSceneCallKit" ofType:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    return bundle;
+}
+
 + (NSString *)localizedString:(NSString *)key {
-    NSBundle *bundle = [NSBundle bundleForClass:[RCCallKitUtility class]];
-    return NSLocalizedStringFromTableInBundle(key, @"RCSceneCallKit", bundle, nil);
+    NSBundle *bundle = [self sourceBundle];
+    if (bundle) {
+        return NSLocalizedStringFromTableInBundle(key, @"RCVoiceRoomCallKit", bundle, nil);
+    }
+    return @"";
 }
 
 @end
