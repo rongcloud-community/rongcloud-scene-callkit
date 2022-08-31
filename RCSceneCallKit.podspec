@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   
   # 1 - Info
   s.name             = 'RCSceneCallKit'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'CallKit For RCRTC'
   s.description      = "CallKit For RCRTC. Single Call."
   s.homepage         = 'https://www.rongcloud.cn/devcenter'

@@ -65,6 +65,7 @@ NSNotificationName const RCCallNewSessionCreationNotification = @"RCCallNewSessi
         self.needPlayingRingAfterForeground = YES;
         self.receivedVideoFirstKeyFrame = NO;
         hangupButtonClick = NO;
+        [self configVideoProfile];
     }
     return self;
 }
@@ -138,7 +139,7 @@ NSNotificationName const RCCallNewSessionCreationNotification = @"RCCallNewSessi
         [RCCallKitUtility setScreenForceOn];
         [_callSession setMinimized:NO];
         hangupButtonClick = NO;
-        
+        [self configVideoProfile];
     }
     return self;
 }
@@ -156,8 +157,14 @@ NSNotificationName const RCCallNewSessionCreationNotification = @"RCCallNewSessi
         if (callSession.callStatus == RCCallActive) {
             [self startActiveTimer];
         }
+        [self configVideoProfile];
     }
     return self;
+}
+
+- (void)configVideoProfile {
+    [[RCCallClient sharedRCCallClient] setVideoProfile:RC_VIDEO_PROFILE_720P];
+    [[RCCallClient sharedRCCallClient] setBitRate:2200];
 }
 
 - (void)registerForegroundNotification {
